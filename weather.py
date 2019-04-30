@@ -1,7 +1,7 @@
 import requests
 
 
-def get_current_weather():
+def current_weather():
 
     # Define the GET request to the API
     # Get current weather data from Seattle
@@ -34,7 +34,8 @@ def five_day():
 
 def main():
 
-    get_current_weather()
+    current_weather()
+    # five_day()
 
 
 main()
