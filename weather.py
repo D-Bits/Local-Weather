@@ -17,6 +17,7 @@ def current_weather():
 
     temp = data['main']['temp']
     ws = data['wind']['speed']
+    humidity = data['main']['humidity']
     description = data['weather'][0]['description']
 
     print()
@@ -29,6 +30,10 @@ def current_weather():
 
     print("Wind Speed: ")
     print(ws)
+    print()
+
+    print("Humidity: ")
+    print(humidity)
     print()
 
     print('Summary: ' + description)
