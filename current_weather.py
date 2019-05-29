@@ -6,12 +6,12 @@ from requests import get
 # Get the current day and time
 def get_current_datetime():
 
+    # Define current datetime
     now = datetime.now()
+
     # Print the current date and time
     print()
-    print("Current Date & Time: ")
-    print(now.month, "-", now.day, "-", now.year)
-    print(now.hour, ":", now.minute)
+    print("Current Date & Time: ", now)
     print()
     print()
 
@@ -47,7 +47,7 @@ def current_weather():
     print("Humidity:", humidity)
     print()
 
-    print('Summary: ' + description)
+    print('Summary: ', description)
     print()
 
 
@@ -55,4 +55,3 @@ if __name__ == "__main__":
 
     get_current_datetime()
     current_weather()
-    # five_day()
