@@ -44,7 +44,7 @@ def imperial_current_weather():
     print("Wind Speed:", ws, "mph")
     print()
 
-    print("Humidity:", humidity)
+    print("Humidity:", humidity,"%")
     print()
 
     print('Summary:', description)
