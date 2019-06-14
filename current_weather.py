@@ -3,6 +3,9 @@ from datetime import datetime
 from requests import get
 
 
+# Prompt the user to enter a city
+city = input('Please enter a city: ')
+
 # Get the current day and time
 def get_current_datetime():
 
@@ -25,17 +28,18 @@ def imperial_current_weather():
     # api_url = requests.get(url="https://api.openweathermap.org/data/2.5/weather", params={'q': 'Seattle,us', 'APPID': api_key, 'units': 'imperial'})
     """
     # Get current weather data from Seattle
-    api_url = f'https://api.openweathermap.org/data/2.5/weather?q=Seattle,us&APPID=ffc5321958cd581c26b5965c4947ac9f&units=imperial'
+    api_url = f'https://api.openweathermap.org/data/2.5/weather?q={city},us&APPID=ffc5321958cd581c26b5965c4947ac9f&units=imperial'
     response = requests.get(api_url)
     data = response.json()
 
     temp = data['main']['temp']
     ws = data['wind']['speed']
     humidity = data['main']['humidity']
+    sunrise = data['sys']['sunrise']
     description = data['weather'][0]['description']
 
 
-    print("The current (imperial) weather for Seattle is: ")
+    print(f"The current (imperial) weather for {city} is: ")
     print() # Blank line for readability
 
     print("The current temp is:", temp, "degrees") 
@@ -43,7 +47,7 @@ def imperial_current_weather():
 
     print("Wind Speed:", ws, "mph")
     print()
-
+    
     print("Humidity:", humidity,"%")
     print()
 
@@ -65,7 +69,7 @@ def metric_current_weather():
     description = data['weather'][0]['description']
 
 
-    print("The current (metric) weather for Seattle is: ")
+    print(f"The current (metric) weather for {city} is: ")
     print() # Blank line for readability
 
     print("The current temp is:", temp, "degrees") 

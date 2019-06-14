@@ -16,4 +16,3 @@ if __name__ == "__main__":
     else:
         raise Exception("Please enter only 1 or 2.")
     
-    
