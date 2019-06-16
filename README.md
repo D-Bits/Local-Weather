@@ -6,7 +6,7 @@ and the requests library to collect and display local weather data.
 
 ## Tools Used
 
-* Python3 
+* Python 3.6 
 * Requests
 * Pipenv
 

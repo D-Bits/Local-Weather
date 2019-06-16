@@ -22,13 +22,11 @@ def get_current_datetime():
 # Define the GET request to the API
 def imperial_current_weather():
 
+    api_key = os.getenv('WEATHER_API_KEY')
     # Old, parameterized attempt
-    """
-    # api_key = os.getenv('WEATHER_API_KEY')
-    # api_url = requests.get(url="https://api.openweathermap.org/data/2.5/weather", params={'q': 'Seattle,us', 'APPID': api_key, 'units': 'imperial'})
-    """
+  
     # Get current weather data from Seattle
-    api_url = f'https://api.openweathermap.org/data/2.5/weather?q={city},us&APPID=ffc5321958cd581c26b5965c4947ac9f&units=imperial'
+    api_url = f'https://api.openweathermap.org/data/2.5/weather?q={city},us&APPID={api_key}&units=imperial'
     response = requests.get(api_url)
     data = response.json()
 
