@@ -34,19 +34,28 @@ def imperial_current_weather():
     ws = data['wind']['speed']
     humidity = data['main']['humidity']
     sunrise = data['sys']['sunrise']
+    sunrise_formatted = datetime.fromtimestamp(sunrise / 1e3)
+    sunset = data['sys']['sunset']
+    sunset_formatted = datetime.fromtimestamp(sunset / 1e3)
     description = data['weather'][0]['description']
 
 
-    print(f"The current (imperial) weather for {city} is: ")
+    print(f"The current weather for {city} is: ")
     print() # Blank line for readability
 
-    print("The current temp is:", temp, "degrees") 
+    print("The current temp is:", temp, "degrees F.") 
     print()
 
     print("Wind Speed:", ws, "mph")
     print()
     
     print("Humidity:", humidity,"%")
+    print()
+
+    print('Sunrise at:', sunrise_formatted)
+    print()
+
+    print('Sunset at:', sunset_formatted)
     print()
 
     print('Summary:', description)
@@ -67,10 +76,10 @@ def metric_current_weather():
     description = data['weather'][0]['description']
 
 
-    print(f"The current (metric) weather for {city} is: ")
+    print(f"The current weather for {city} is: ")
     print() # Blank line for readability
 
-    print("The current temp is:", temp, "degrees") 
+    print("The current temp is:", temp, "degrees C") 
     print()
 
     print("Wind Speed:", ws, "kph")

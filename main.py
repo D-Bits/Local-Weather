@@ -1,4 +1,7 @@
-from current_weather import get_current_datetime, imperial_current_weather, metric_current_weather
+from current_weather import(
+    imperial_current_weather,
+    metric_current_weather
+) 
 
 
 if __name__ == "__main__":
