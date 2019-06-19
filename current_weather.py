@@ -14,8 +14,7 @@ def get_current_datetime():
 
     # Print the current date and time
     print()
-    print("Current Date & Time: ", now)
-    print()
+    print("Current Date & Time: ", now, '\n')
 
 
 # Define the GET request to the API
@@ -51,7 +50,7 @@ def imperial_current_weather():
 
     print('Sunset at:', sunset_formatted, '\n')
 
-    print('Summary:', description)
+    print('Summary:', description, '\n')
 
 
 def metric_current_weather():
@@ -75,5 +74,5 @@ def metric_current_weather():
   
     print("Humidity:", humidity,"% \n")
 
-    print('Summary: ', description)
+    print('Summary: ', description, '\n')
     

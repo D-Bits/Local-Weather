@@ -1,12 +1,13 @@
 from current_weather import(
     imperial_current_weather,
-    metric_current_weather
+    metric_current_weather,
+    get_current_datetime
 ) 
 
 
 if __name__ == "__main__":
 
-    #get_current_datetime()
+    get_current_datetime()
     units = int(input('Please enter 1 for metric units, or 2 for imperial units: '))
     
     print() # Blank line for readability
