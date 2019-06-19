@@ -16,7 +16,6 @@ def get_current_datetime():
     print()
     print("Current Date & Time: ", now)
     print()
-    print()
 
 
 # Define the GET request to the API
@@ -40,27 +39,19 @@ def imperial_current_weather():
     description = data['weather'][0]['description']
 
 
-    print(f"The current weather for {city} is: ")
-    print() # Blank line for readability
+    print(f"The current weather for {city} is: \n")
 
-    print("The current temp is:", temp, "degrees F.") 
-    print()
+    print("The current temp is:", temp, "degrees F. \n") 
 
-    print("Wind Speed:", ws, "mph")
-    print()
+    print("Wind Speed:", ws, "mph \n")
     
-    print("Humidity:", humidity,"%")
-    print()
+    print("Humidity:", humidity,"% \n")
 
-    print('Sunrise at:', sunrise_formatted)
-    print()
+    print('Sunrise at:', sunrise_formatted, '\n')
 
-    print('Sunset at:', sunset_formatted)
-    print()
+    print('Sunset at:', sunset_formatted, '\n')
 
     print('Summary:', description)
-    print()
-    print()
 
 
 def metric_current_weather():
@@ -76,18 +67,13 @@ def metric_current_weather():
     description = data['weather'][0]['description']
 
 
-    print(f"The current weather for {city} is: ")
-    print() # Blank line for readability
+    print(f"The current weather for {city} is: \n")
 
-    print("The current temp is:", temp, "degrees C") 
-    print()
+    print("The current temp is:", temp, "degrees C \n") 
 
-    print("Wind Speed:", ws, "kph")
-    print()
+    print("Wind Speed:", ws, "kph \n")
+  
+    print("Humidity:", humidity,"% \n")
 
-    print("Humidity:", humidity,"%")
-    print()
-
-    print('Summary:', description)
-    print()
+    print('Summary: ', description)
     
