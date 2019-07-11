@@ -4,6 +4,7 @@ from requests import get
 
 
 # Prompt the user to enter a city
+print()
 city = input('Please enter a city: ')
 
 # Get the current day and time
